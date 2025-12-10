@@ -17,16 +17,16 @@ class AdminSiteTests(TestCase):
             license_number="ADM56984"
         )
 
-    def test_author_license_number_listed(self):
+    def test_driver_license_number_listed(self):
         """
-        Test that user's license_number is in list_display on author admin page
+        Test that user's license_number is in list_display on driver admin page
         :return:
         """
         url = reverse("admin:taxi_driver_changelist")
         res = self.client.get(url)
         self.assertContains(res, self.driver.license_number)
 
-    def test_author_detail_license_number_listed(self):
+    def test_driver_detail_license_number_listed(self):
         """
         Test that user's license_number is on user detail admin page
         :return:

@@ -1,4 +1,3 @@
-from django.contrib.admin.templatetags.admin_list import search_form
 from django.contrib.auth import get_user_model
 from django.test import Client, TestCase
 from django.urls import reverse
